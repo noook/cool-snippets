@@ -16,7 +16,7 @@ const patterns = {
 };
 
 const validations = {};
-var strings = ['Str1ng to {test}', 'string to test'];
+const strings = ['Str1ng to {test}', 'string to test'];
 
 for (let i in patterns) {
     validations[i] = patterns[i].test(strings[0]);
