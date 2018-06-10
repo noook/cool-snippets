@@ -9,7 +9,9 @@ const options = {
 };
 
 const patterns = {
-    checkLength: options.length.maxChar == null ? new RegExp(`.{${options.length.minChar},}`) : new RegExp(`.{${options.length.minChar},${options.length.maxChar}}`),
+    checkLength: options.length.maxChar == null ? 
+    new RegExp(`.{${options.length.minChar},}`) : 
+    new RegExp(`.{${options.length.minChar},${options.length.maxChar}}`),
     digitNumber: new RegExp(`(?=(.*[0-9]){${options.digitNumber},})`),
     checkSpecialCharacter: new RegExp(`(?=(.*[$@$!%*#?&_{|}+.']){${options.specCharNumber},})`),
     checkCapitalCharacter: new RegExp(`(?=(.*[A-Z]){${options.majNumber},})`)
