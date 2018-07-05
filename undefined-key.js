@@ -31,4 +31,10 @@ for (let i in collection) {
   // Causes a crash with error : Can't read property 'height' of undefined
   // console.log(collection[i].options.height);
   console.log((collection[i].options || {}).height || "Not defined");
+  /**
+   * Ouputs: 
+   * 180
+   * Not defined
+   * 176
+   */
 }
